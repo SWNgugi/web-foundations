@@ -1,0 +1,158 @@
+/* Reset and base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f4f6f8;
+}
+
+/* Header */
+header {
+  background: #2b5cff;
+  color: #fff;
+  text-align: center;
+  padding: 32px 16px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0 0 16px;
+}
+
+/* Navigation (Flexbox) */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Main and section cards */
+main {
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+main section {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Features list (Grid) */
+.features {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.features li {
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+/* Shortcuts table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #2b5cff;
+  color: #fff;
+}
+
+/* Forms: fields stacked, full width */
+label {
+  display: block;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+}
+
+form p {
+  margin: 0 0 16px;
+}
+
+/* Buttons */
+button {
+  background: #2b5cff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #1e43c4;
+  transform: translateY(-1px);
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  header {
+    padding: 16px 12px;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  nav {
+    gap: 8px;
+  }
+
+  main {
+    margin: 16px auto;
+  }
+}
